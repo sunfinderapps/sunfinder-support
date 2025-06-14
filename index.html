@@ -13,8 +13,21 @@
       background: #f9f9f9;
       color: #333;
     }
-    h1 {
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    header img {
+      height: 60px;
+      width: 60px;
+      border-radius: 12px;
+    }
+    header h1 {
+      font-size: 2rem;
       color: #f59e0b;
+      margin: 0;
     }
     .store-section {
       display: flex;
@@ -41,7 +54,11 @@
 </head>
 <body>
 
-  <h1>Sun Finder</h1>
+  <header>
+    <img src="app-icon.png" alt="Sun Finder Icon" />
+    <h1>Sun Finder</h1>
+  </header>
+
   <p><strong>Sun Finder</strong> is designed for homebuyers, outdoor enthusiasts, photographers, gardeners, or solar planners, giving you the power to predict and visualize the sun’s movement anywhere on Earth, at any time.</p>
 
   <h2>Download the App</h2>
