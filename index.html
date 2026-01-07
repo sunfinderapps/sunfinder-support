@@ -3,90 +3,493 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sun Finder - App Homepage</title>
+  <title>Sun Finder - Track the Sun Anytime, Anywhere</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      background: #f9f9f9;
       color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    header {
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #ffa726 100%);
+      padding: 80px 20px 120px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
+      animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-100px); }
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .app-icon-large {
+      width: 120px;
+      height: 120px;
+      border-radius: 26px;
+      margin: 0 auto 30px;
+      display: block;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+
+    .hero .tagline {
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    /* Download Buttons */
+    .download-buttons {
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
     }
-    header img {
+
+    .download-btn {
+      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .download-btn img {
       height: 60px;
-      width: 60px;
-      border-radius: 12px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
     }
-    header h1 {
-      font-size: 2rem;
-      color: #f59e0b;
-      margin: 0;
+
+    .download-btn:hover {
+      transform: translateY(-5px);
     }
-    .store-section {
+
+    /* Features Section */
+    .features {
+      padding: 80px 20px;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #2d3748;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #718096;
+      margin-bottom: 60px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 1100px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .feature-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .feature-content {
+      padding: 30px;
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      color: #2d3748;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .feature-description {
+      color: #4a5568;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* Use Cases Section */
+    .use-cases {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .use-case {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+      border-radius: 16px;
+      border: 2px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+
+    .use-case:hover {
+      border-color: #ffa726;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(255,167,38,0.2);
+    }
+
+    .use-case-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .use-case-title {
+      font-size: 1.3rem;
+      color: #2d3748;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .use-case-description {
+      color: #718096;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+    }
+
+    .qr-codes {
       display: flex;
-      align-items: center;
-      margin: 1.5rem 0;
-      gap: 1rem;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 40px;
     }
-    .store-section img.icon {
-      height: 50px;
+
+    .qr-item {
+      text-align: center;
     }
-    .store-section img.qr {
-      height: 100px;
-      border: 1px solid #ccc;
+
+    .qr-item img {
+      width: 180px;
+      height: 180px;
+      border-radius: 16px;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
     }
-    .contact {
-      margin-top: 2rem;
+
+    .qr-label {
+      font-size: 1.1rem;
+      font-weight: 600;
     }
+
+    /* Footer */
     .footer {
-      margin-top: 4rem;
+      background: #2d3748;
+      color: white;
+      padding: 60px 20px 30px;
+      text-align: center;
+    }
+
+    .footer-links {
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: #cbd5e0;
+      text-decoration: none;
+      margin: 0 20px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffa726;
+    }
+
+    .footer-contact {
+      margin-bottom: 30px;
+      color: #cbd5e0;
+    }
+
+    .footer-contact a {
+      color: #ffa726;
+      text-decoration: none;
+    }
+
+    .footer-copyright {
+      color: #718096;
       font-size: 0.9rem;
-      color: #888;
+      padding-top: 20px;
+      border-top: 1px solid #4a5568;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero .tagline {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .use-cases-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qr-codes {
+        gap: 40px;
+      }
+
+      .download-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="app-icon.png" alt="Sun Finder Icon" />
-    <h1>Sun Finder</h1>
-  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="app-icon.png" alt="Sun Finder App Icon" class="app-icon-large" />
+      <h1>Sun Finder</h1>
+      <p class="tagline">Predict and visualise the sun's path anytime, anywhere — perfect for homebuyers, photographers, gardeners, and adventurers.</p>
 
-  <p><strong>Sun Finder</strong> is designed for homebuyers, outdoor enthusiasts, photographers, gardeners, or solar planners, giving you the power to predict and visualize the sun’s movement anywhere on Earth, at any time.</p>
+      <div class="download-buttons">
+        <a href="https://apps.apple.com/app/6746398268" target="_blank" class="download-btn">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.gooludou.app.sunfinder" target="_blank" class="download-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <h2>Download the App</h2>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <p class="section-subtitle">Sun Finder helps you make the most of every ray of sunlight with cutting-edge visualization tools</p>
 
-  <div class="store-section">
-    <a href="https://apps.apple.com/app/6746398268" target="_blank">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="icon" />
-    </a>
-    <img src="qr-ios.png" alt="QR Code for iOS" class="qr" />
-  </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <img src="screenshots/page_000.jpg" alt="Map View" class="feature-image" />
+          <div class="feature-content">
+            <h3 class="feature-title">Map View</h3>
+            <p class="feature-description">See the sun's path for any location on Earth. Explore how sunlight changes across seasons, save your favorite spots, and export sun path images to share with friends or clients.</p>
+          </div>
+        </div>
 
-  <div class="store-section">
-    <a href="https://play.google.com/store/apps/details?id=com.gooludou.app.sunfinder" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="icon" />
-    </a>
-    <img src="qr-android.png" alt="QR Code for Android" class="qr" />
-  </div>
+        <div class="feature-card">
+          <img src="screenshots/page_001.jpg" alt="AR Camera View" class="feature-image" />
+          <div class="feature-content">
+            <h3 class="feature-title">AR View</h3>
+            <p class="feature-description">View the sun's path overlaid in real-time through your camera. Capture photos with projected sun paths and watch how the sun moves throughout the day or year in your live view.</p>
+          </div>
+        </div>
 
-  <div class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sunfinderapps@gmail.com">sunfinderapps@gmail.com</a></p>
-  </div>
+        <div class="feature-card">
+          <img src="screenshots/page_002.jpg" alt="Shadow Simulation" class="feature-image" />
+          <div class="feature-content">
+            <h3 class="feature-title">Shadow Tracking</h3>
+            <p class="feature-description">Place an object anywhere on the map and see how its shadow moves and changes throughout the day. Perfect for planning outdoor spaces, gardens, or solar installations.</p>
+          </div>
+        </div>
 
-  <p><a href="privacy.html">Privacy Policy</a></p>
+        <div class="feature-card">
+          <img src="screenshots/page_003.jpg" alt="Golden Hour Times" class="feature-image" />
+          <div class="feature-content">
+            <h3 class="feature-title">Photo Hours</h3>
+            <p class="feature-description">Check golden hour, blue hour, and twilight times for any location. Plan your perfect sunrise, sunset, or night photography shots and never miss the most beautiful light of the day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="footer">
-    &copy; 2025 Sun Finder. All rights reserved.
-  </div>
+  <!-- Use Cases Section -->
+  <section class="use-cases">
+    <div class="container">
+      <h2 class="section-title">Perfect For Everyone</h2>
+      <p class="section-subtitle">Whether you're planning a home purchase or the perfect photo, Sun Finder has you covered</p>
+
+      <div class="use-cases-grid">
+        <div class="use-case">
+          <div class="use-case-icon">🏡</div>
+          <h3 class="use-case-title">Homebuyers & Renters</h3>
+          <p class="use-case-description">Find the sunniest property before you commit. Understand exactly how sunlight hits your potential home throughout the day and year.</p>
+        </div>
+
+        <div class="use-case">
+          <div class="use-case-icon">📸</div>
+          <h3 class="use-case-title">Photographers</h3>
+          <p class="use-case-description">Plan golden hour, sunrise, or sunset shots with precision. Never miss the perfect lighting for your photography.</p>
+        </div>
+
+        <div class="use-case">
+          <div class="use-case-icon">🌱</div>
+          <h3 class="use-case-title">Gardeners & Designers</h3>
+          <p class="use-case-description">Design gardens and outdoor spaces around real sunlight exposure. Ensure your plants get the light they need to thrive.</p>
+        </div>
+
+        <div class="use-case">
+          <div class="use-case-icon">🏔️</div>
+          <h3 class="use-case-title">Outdoor Explorers</h3>
+          <p class="use-case-description">Plan hikes, camps, or picnics with sunlight in mind. Know exactly when and where the sun will be during your adventure.</p>
+        </div>
+
+        <div class="use-case">
+          <div class="use-case-icon">☀️</div>
+          <h3 class="use-case-title">Solar Panel Owners</h3>
+          <p class="use-case-description">Align panels for maximum energy output. Analyze sun exposure patterns to optimize your solar installation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Start Tracking the Sun Today</h2>
+      <p>Download Sun Finder and stay in sync with the sun, wherever life takes you.</p>
+
+      <div class="download-buttons">
+        <a href="https://apps.apple.com/app/6746398268" target="_blank" class="download-btn">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.gooludou.app.sunfinder" target="_blank" class="download-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
+        </a>
+      </div>
+
+      <div class="qr-codes">
+        <div class="qr-item">
+          <img src="qr-ios.png" alt="QR Code for iOS" />
+          <div class="qr-label">Scan for iOS</div>
+        </div>
+        <div class="qr-item">
+          <img src="qr-android.png" alt="QR Code for Android" />
+          <div class="qr-label">Scan for Android</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="golden_hour.html">Golden Hour</a>
+        <a href="blue_hour.html">Blue Hour</a>
+        <a href="twilight_time.html">Twilight Times</a>
+      </div>
+
+      <div class="footer-contact">
+        Contact us: <a href="mailto:sunfinderapps@gmail.com">sunfinderapps@gmail.com</a>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2025 Sun Finder. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
