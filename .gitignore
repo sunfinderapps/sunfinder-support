@@ -1,6 +1,9 @@
 # Claude Code local settings
 .claude
 
+# Firebase
+.firebase
+
 # macOS
 .DS_Store
 
