@@ -1,0 +1,12 @@
+# robots.txt for Sun Finder
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://sunfinder.app/sitemap.xml
+
+# Disallow irrelevant files
+Disallow: /README.md
+Disallow: /description.txt
+Disallow: /short-description.txt
