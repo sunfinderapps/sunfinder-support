@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://sunfinder.app/sitemap.xml
+Sitemap: https://sunfinderapps.com/sitemap.xml
 
 # Disallow irrelevant files
 Disallow: /README.md

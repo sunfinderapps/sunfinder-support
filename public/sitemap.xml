@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sunfinder.app/</loc>
+    <loc>https://sunfinderapps.com/</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sunfinder.app/privacy.html</loc>
+    <loc>https://sunfinderapps.com/privacy.html</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sunfinder.app/terms.html</loc>
+    <loc>https://sunfinderapps.com/terms.html</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sunfinder.app/golden_hour.html</loc>
+    <loc>https://sunfinderapps.com/golden_hour.html</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunfinder.app/blue_hour.html</loc>
+    <loc>https://sunfinderapps.com/blue_hour.html</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunfinder.app/twilight_time.html</loc>
+    <loc>https://sunfinderapps.com/twilight_time.html</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
