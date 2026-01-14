@@ -160,9 +160,74 @@
       transform: translateY(-5px);
     }
 
+    /* Video Showcase Section */
+    .video-showcase {
+      padding: 100px 20px 60px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+      text-align: center;
+    }
+
+    .video-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .video-wrapper {
+      flex: 0 0 auto;
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      background: #000;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .demo-video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 30px;
+    }
+
+    .video-content {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .video-showcase h2 {
+      font-size: 2.5rem;
+      color: #2d3748;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .video-showcase p {
+      font-size: 1.2rem;
+      color: #4a5568;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .video-highlight {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
     /* Features Section */
     .features {
-      padding: 80px 20px;
+      padding: 40px 20px 80px;
       background: #f8f9fa;
     }
 
@@ -381,6 +446,30 @@
         font-size: 1.1rem;
       }
 
+      .video-showcase {
+        padding: 60px 20px;
+      }
+
+      .video-container {
+        gap: 40px;
+      }
+
+      .video-content {
+        text-align: center;
+      }
+
+      .video-showcase h2 {
+        font-size: 2rem;
+      }
+
+      .video-showcase p {
+        font-size: 1.1rem;
+      }
+
+      .video-wrapper {
+        max-width: 280px;
+      }
+
       .section-title {
         font-size: 2rem;
       }
@@ -420,6 +509,23 @@
         <a href="https://play.google.com/store/apps/details?id=com.gooludou.app.sunfinder" target="_blank" class="download-btn">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Showcase Section -->
+  <section class="video-showcase">
+    <div class="video-container">
+      <div class="video-wrapper">
+        <video class="demo-video" autoplay muted loop playsinline>
+          <source src="media/video/demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-content">
+        <h2>See It In Action</h2>
+        <p>Experience the magic of <span class="video-highlight">Sun Finder</span>. From real-time AR visualization to precision shadow tracking, see exactly how light interacts with your world.</p>
+        <p>Whether you're scouting the perfect photo op, designing a sun-drenched garden, or finding your dream home's natural glow—do it all with a single tap.</p>
       </div>
     </div>
   </section>
