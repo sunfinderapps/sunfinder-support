@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.materlotteries.retail.qa",
+      "sha256_cert_fingerprints": [
+        "F0:06:61:6C:B4:D6:F4:41:37:E3:1B:B5:FC:45:8D:C0:8B:17:74:C6:1B:32:B2:75:C5:E2:C2:E8:A7:FD:87:BC"
+      ]
+    }
+  }
+]
