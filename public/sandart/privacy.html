@@ -4,66 +4,210 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – SandArt</title>
-  <meta name="description" content="SandArt Privacy Policy: SandArt is a moving sand picture for iPhone and iPad that collects no data, has no accounts, no analytics, and no third-party tracking.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://sunfinderapps.com/sandart/privacy.html">
+  <meta name="description" content="SandArt Privacy Policy: SandArt is a moving sand picture for iPhone and iPad that collects no data, has no accounts, no analytics, and no third-party tracking." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sunfinderapps.com/sandart/privacy.html" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sunfinderapps.com/sandart/privacy.html">
-  <meta property="og:title" content="Privacy Policy – SandArt">
-  <meta property="og:description" content="SandArt Privacy Policy: SandArt collects no data, has no accounts, no analytics, and no third-party tracking.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sunfinderapps.com/sandart/privacy.html" />
+  <meta property="og:title" content="Privacy Policy – SandArt" />
+  <meta property="og:description" content="SandArt Privacy Policy: SandArt collects no data, has no accounts, no analytics, and no third-party tracking." />
+  <meta property="og:image" content="https://sunfinderapps.com/sandart/app-icon.png" />
+
+  <meta name="theme-color" content="#0b0e14" />
+  <link rel="icon" type="image/png" href="app-icon.png" />
+  <link rel="apple-touch-icon" href="app-icon.png" />
 
   <style>
+    :root {
+      --bg: #0b0e14;
+      --surface: #131822;
+      --ink: #f5f6f8;
+      --muted: #a2abb8;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #e5a95c;
+      --max-width: 800px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
+      margin: 0;
+      background: radial-gradient(circle at 50% 0%, #1a2030 0%, var(--bg) 55%);
+      color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.6;
-      color: #222;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
-    h1, h2 {
-      color: #333;
-    }
+
     a {
-      color: #007aff;
+      color: var(--accent);
+      text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(11, 14, 20, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 48px 0 64px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+    }
+
+    .updated {
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: var(--ink);
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    strong {
+      color: var(--ink);
+    }
+
     ul {
       padding-left: 1.25rem;
     }
+
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0 48px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
     }
   </style>
 </head>
 <body>
-  <h1>SandArt Privacy Policy</h1>
-  <p><em>Last updated: November 3, 2026</em></p>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/sandart/">
+        <img src="app-icon.png" alt="SandArt app icon" />
+        <span>SandArt</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/sandart/">Support &amp; Guide</a>
+        <a href="mailto:sunfinderapps@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <p>SandArt is a moving sand picture for iPhone and iPad. We built it so that it doesn't need your data.</p>
+  <main class="container">
+    <h1>SandArt Privacy Policy</h1>
+    <p class="updated"><em>Last updated: November 3, 2026</em></p>
 
-  <h2>What we collect</h2>
-  <p><strong>Nothing.</strong> SandArt has no accounts, no analytics, no advertising and no third-party tracking or SDKs. We don't receive any information about you or how you use the app.</p>
+    <p>SandArt is a moving sand picture for iPhone and iPad. We built it so that it doesn't need your data.</p>
 
-  <h2>What stays on your device</h2>
-  <ul>
-    <li><strong>Your pictures and settings.</strong> Saved and recent pictures, your settings, and the picture on screen are stored only on your device. Deleting the app deletes them.</li>
-    <li><strong>Motion sensors.</strong> SandArt reads your device's orientation so the sand follows gravity. These readings are used live and never stored or sent anywhere.</li>
-    <li><strong>Photos you choose.</strong> For Photo to sand, you pick a photo with the system photo picker. SandArt can only see the photo you pick; it's turned into sand on your device and isn't uploaded.</li>
-    <li><strong>Saving to Photos.</strong> When you save an image or video, SandArt asks for permission to <em>add</em> to your photo library. It can't read your existing photos.</li>
-  </ul>
+    <h2>What we collect</h2>
+    <p><strong>Nothing.</strong> SandArt has no accounts, no analytics, no advertising and no third-party tracking or SDKs. We don't receive any information about you or how you use the app.</p>
 
-  <h2>Purchases</h2>
-  <p>SandArt Pro is sold through Apple's App Store. Apple handles payment and gives SandArt only a confirmation that Pro is unlocked. See Apple's privacy policy for how Apple handles purchases.</p>
+    <h2>What stays on your device</h2>
+    <ul>
+      <li><strong>Your pictures and settings.</strong> Saved and recent pictures, your settings, and the picture on screen are stored only on your device. Deleting the app deletes them.</li>
+      <li><strong>Motion sensors.</strong> SandArt reads your device's orientation so the sand follows gravity. These readings are used live and never stored or sent anywhere.</li>
+      <li><strong>Photos you choose.</strong> For Photo to sand, you pick a photo with the system photo picker. SandArt can only see the photo you pick; it's turned into sand on your device and isn't uploaded.</li>
+      <li><strong>Saving to Photos.</strong> When you save an image or video, SandArt asks for permission to <em>add</em> to your photo library. It can't read your existing photos.</li>
+    </ul>
 
-  <h2>Children</h2>
-  <p>SandArt is suitable for all ages and collects no data from anyone, including children.</p>
+    <h2>Purchases</h2>
+    <p>SandArt Pro is sold through Apple's App Store. Apple handles payment and gives SandArt only a confirmation that Pro is unlocked. See Apple's privacy policy for how Apple handles purchases.</p>
 
-  <h2>Changes</h2>
-  <p>If this policy changes, the new version will be posted here with a new date.</p>
+    <h2>Children</h2>
+    <p>SandArt is suitable for all ages and collects no data from anyone, including children.</p>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:sunfinderapps@gmail.com">sunfinderapps@gmail.com</a></p>
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version will be posted here with a new date.</p>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sunfinderapps@gmail.com">sunfinderapps@gmail.com</a></p>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>&copy; 2026 SandArt. All rights reserved.</span>
+      <a href="/sandart/">Back to SandArt Support</a>
+    </div>
+  </footer>
 </body>
 </html>

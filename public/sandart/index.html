@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SandArt: Moving Sand Picture — Support &amp; Guide</title>
+  <meta name="description" content="Official support page and user guide for SandArt: Moving Sand Picture for iPhone and iPad. Turn your phone and watch real gravity pour tens of thousands of grains of sand." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sunfinderapps.com/sandart/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sunfinderapps.com/sandart/" />
+  <meta property="og:title" content="SandArt: Moving Sand Picture — Support &amp; Guide" />
+  <meta property="og:description" content="A moving sand picture sealed in glass, in your pocket. Turn your phone and watch real gravity pour the sand." />
+  <meta property="og:image" content="https://sunfinderapps.com/sandart/app-icon.png" />
+
+  <meta name="theme-color" content="#0b0e14" />
+  <link rel="icon" type="image/png" href="app-icon.png" />
+  <link rel="apple-touch-icon" href="app-icon.png" />
+
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --surface: #131822;
+      --surface-elevated: #1a2130;
+      --ink: #f5f6f8;
+      --muted: #a2abb8;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #e5a95c;
+      --accent-soft: rgba(229, 169, 92, 0.14);
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 50% 0%, #1a2030 0%, var(--bg) 55%);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(11, 14, 20, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 64px 0 48px;
+      text-align: center;
+    }
+
+    .hero-icon {
+      width: 104px;
+      height: 104px;
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4.5vw, 2.85rem);
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+    }
+
+    /* Grid Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      color: var(--ink);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 20px;
+      transition: background 0.15s ease;
+    }
+
+    details[open] {
+      background: var(--surface-elevated);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.02rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      color: var(--accent);
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    /* Support CTA */
+    .support-box {
+      background: linear-gradient(135deg, var(--surface-elevated) 0%, var(--surface) 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .support-box h2 {
+      margin: 0;
+    }
+
+    .support-box p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 640px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #11151c;
+      font-weight: 600;
+      padding: 11px 20px;
+      border-radius: 10px;
+      margin-top: 4px;
+      transition: opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0 48px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/sandart/">
+        <img src="app-icon.png" alt="SandArt app icon" />
+        <span>SandArt</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#guide">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <img class="hero-icon" src="app-icon.png" alt="SandArt: Moving Sand Picture icon" />
+      <div><span class="badge">iPhone &amp; iPad</span></div>
+      <h1>SandArt: Moving Sand Picture</h1>
+      <p class="subtitle">
+        Coloured sand, liquid, and a pocket of air sealed in glass. Turn your phone and real gravity pours the sand into a landscape nobody has seen before.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Real Device Gravity</span>
+        <span class="pill">Up to 100,000 Grains</span>
+        <span class="pill">120 Hz ProMotion</span>
+        <span class="pill">No Ads or Tracking</span>
+      </div>
+    </div>
+
+    <section id="guide">
+      <h2>How to Use SandArt</h2>
+      <p class="section-lead">Quick tips to get the most out of your moving sand picture.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Turn or Flip Your Device</h3>
+          <p>
+            SandArt uses your iPhone or iPad motion sensors so sand always falls toward real gravity. Turn or flip your device in your hand to break the air barrier and watch streams of sand pour through rising bubbles. Lay your device flat on a table and the sand rests.
+          </p>
+        </div>
+        <div class="card">
+          <h3>2. Assisted Rotation</h3>
+          <p>
+            Want to watch SandArt while your device rests on a stand or desk? Open <strong>More (…) › Settings › Assisted rotation</strong> to display on-screen Rotate and Flip buttons so you can turn the frame with a tap.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3. Save Images &amp; 15s Videos</h3>
+          <p>
+            Long-press anywhere on the sand picture (or open <strong>More (…) › Share / Save</strong>) to save a snapshot to your Photos library or record a 15-second video of the sand flowing.
+          </p>
+        </div>
+        <div class="card">
+          <h3>4. Shuffle, Daily &amp; Photo to Sand</h3>
+          <p>
+            Tap <strong>Shuffle</strong> to mix a fresh, uniquely numbered sand recipe, or try <strong>Today's picture</strong> for the shared daily seed. With <strong>SandArt Pro</strong>, use <strong>Photo to sand</strong> to turn any photo into flowing sand grains.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-lead">Answers to common questions about controls, purchases, and privacy.</p>
+
+      <div class="faq-list">
+        <details>
+          <summary>Why isn't the sand moving?</summary>
+          <p>
+            Just like a physical sand picture, sand settles at the bottom of the frame or pauses when your device is lying flat on a desk. Physically turn or flip your device upright so gravity pulls the sand down through the air bubbles. If you prefer not to rotate your device physically, enable <strong>More (…) › Settings › Assisted rotation</strong> to use on-screen Rotate and Flip controls.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I restore my SandArt Pro purchase?</summary>
+          <p>
+            SandArt Pro is a one-time non-consumable purchase (with Family Sharing enabled). To restore it on a new device, open <strong>More (…) › Settings › Restore Purchases</strong>, or tap <strong>Restore Purchases</strong> at the bottom of the SandArt Pro screen while signed in with the same Apple Account.
+          </p>
+        </details>
+
+        <details>
+          <summary>What is included in SandArt Pro?</summary>
+          <p>
+            SandArt Pro is a single one-time purchase that unlocks:
+            <br />• <strong>Photo to sand:</strong> Transform any photo from your library into flowing sand grains.
+            <br />• <strong>All frames:</strong> Round, Hourglass, Wide, and Heart frames (in addition to Classic).
+            <br />• <strong>Palette choice:</strong> Pick your favourite colour palette whenever you shuffle.
+            <br />• <strong>Ambient mode:</strong> Keeps the screen awake while your device is charging on a desk.
+            <br />• <strong>Watermark-free exports:</strong> Save images and 15-second videos without a watermark.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I enable or mute the pouring sound and haptics?</summary>
+          <p>
+            Open <strong>More (…) › Settings</strong> to toggle <strong>Sound</strong> (a soft pouring hiss that responds to how fast the sand is flowing) and <strong>Haptics</strong> (subtle texture as slopes slide). Note that Sound respects your device's physical Silent Mode switch.
+          </p>
+        </details>
+
+        <details>
+          <summary>Does "Photo to sand" upload my photos anywhere?</summary>
+          <p>
+            Never. When you choose a photo using Apple's system photo picker, SandArt converts that single photo into sand grains directly on your device. SandArt has no servers, no analytics, and no internet connection for your content.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why does SandArt ask for Photos permission when saving?</summary>
+          <p>
+            When you tap <strong>Save Image</strong> or save a recorded video, iOS asks for <em>Add Photos Only</em> permission so SandArt can write the new image or video into your Photos library. SandArt cannot read or browse your photo library.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="support-box">
+        <h2>Need Help or Have Feedback?</h2>
+        <p>
+          If you run into any issues, have questions about SandArt Pro, or want to suggest a new frame or palette, email us directly and we'll be happy to help.
+        </p>
+        <a class="btn" href="mailto:sunfinderapps@gmail.com?subject=SandArt%20Support">
+          Email Support (sunfinderapps@gmail.com)
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>&copy; 2026 SandArt. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/sandart/">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:sunfinderapps@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
